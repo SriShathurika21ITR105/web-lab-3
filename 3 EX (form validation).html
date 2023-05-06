@@ -1,0 +1,228 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <meta name="keywords" content="example, JavaScript Form Validation, Sample registration form" />
+        <meta name="description" content="This document is an example of JavaScript Form Validation using a sample registration form. " />
+        <link rel='stylesheet' href='js-form-validation.css' type='text/css' />
+        <script src="sample-registration-form-validation.js"></script>
+        <title>Registration form</title>
+        <style>
+              .container{
+                max-width: 1000px;
+                width: 90%;
+                padding: 200px;
+                
+                background-image: url('https://static.wixstatic.com/media/84770f_0cf5b6c1550a4b8c92f92f1064cc68de~mv2.jpg/v1/fill/w_605,h_1074,al_t,q_85,enc_auto/84770f_0cf5b6c1550a4b8c92f92f1064cc68de~mv2.jpg');
+                background-repeat: no-repeat;
+                background-size: 100% 90%;
+ </style>
+    
+        <script type="text/javascript">
+            function formvalidation(){
+                var fname=document.getElementById("fn");
+                var lname=document.getElementById("ln");
+                var mail=document.getElementById("email");
+                var fathername=document.getElementById("fname");
+                var mothername=document.getElementById("mname");
+                
+                if(fname.value==""){
+                    alert("First name can't be null");
+                    return false;
+                }
+                else{
+                    true;
+                }
+    
+                if(lname.value==""){
+                    alert("Last name can't be empty");
+                }
+                else{
+                    true;
+                
+                
+                if(mail.value==""){
+                    alert("Enter your mail id");
+                }
+                else{
+                    true;
+              if(fathername.value==""){
+                    alert("First name can't be null");
+                    return false;
+                }
+                else{
+                    true;
+                }
+    
+                if(mothername.value==""){
+                    alert("Last name can't be empty");
+                }
+                else{
+                    true;
+                }
+
+            }
+        </script>
+    </head>
+
+    <body>
+<div class="container">
+            <div class="heading"><center><h1 style="color:green"><b>ONLINE BOOKING FORM</b></h1></center></div>
+<hr>
+<fieldset>
+<legend style="color:blue"><b>PASSENGER CONTACT INFO</b></legend>
+
+<br>
+            
+            <form name="f1" onsubmit="return formvalidation();">
+                <div class="card-details">
+<br>
+                    
+                    <div class="card-box">
+                        <span class="details"><b>First Name :</b></span>
+                        <input type="text" name="fn" id="fn" placeholder="Enter your name" pattern="[a-zA-Z]{3,}">
+                    </div>
+<br>
+     
+<div class="card-box">
+
+                        <span class="details"><b>Last Name : </b></span>
+                        <input type="text" name="ln" id="ln" placeholder="Enter your name" pattern="[a-zA-Z]{3,}" required>
+                    </div>
+<br>
+<div class="card-box">
+                        <span class="details"><b>Age  :</b></span>
+                        <input type="text" placeholder="Enter your Age..." required>
+                    </div>
+<br>
+
+                    <div class="card-box">
+                        <span class="details"><b>Email ID :</b></span>
+                        <input type="email" name="email"  id="email" placeholder="Enter your mail" required>
+                    </div>
+<br>
+
+<div class="card-box">
+                        <span class="details"><b>Nationality   :</b></span>
+                        <input type="text" placeholder=" " required>
+                    </div>
+<br>
+<div>
+<label for="Street Address"><b> Address  :</b></label>
+<textarea name="Enter your address" rows="4" cols="25"></textarea>
+</div>
+<br>
+<div class="card-box">
+                        <span class="details"><b>State :</b></span>
+                        <input type="text" name="fn" id="fn" placeholder=" " pattern="[a-zA-Z]{3,}">
+                    </div>
+<br>
+     
+<div class="card-box">
+
+                        <span class="details"><b>City :</b></span>
+                        <input type="text" name="ln" id="ln" placeholder=" " pattern="[a-zA-Z]{3,}" required>
+                    </div>
+<br>
+
+                    <div class="card-box">
+                        <span class="details"><b>Mobile Number :</b></span>
+                        <input type="tel" id="phoneNo" name="phoneNo" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
+                    </div>
+<br>
+
+
+                   
+
+
+
+                    <div class="circle-form">
+                        <span class="circle-title"><b>Gender:</b></span>
+                        <div class="category">
+                            <input type="radio" name="gender" required>Male
+                            <input type="radio" name="gender" required>Female
+                        </div>
+<br>
+              
+     
+
+
+</fieldset>
+<br>
+<fieldset>
+<legend style="color:blue"><b>BOOKING DETAILS</b></legend>
+<br>
+<div>
+<label><b>Pickup Address :</b></label>
+<textarea name="Enter your address" rows="4" cols="25"></textarea>
+<br>
+</div>
+<br>
+<div>
+<label><b>Destination Address :</b></label>
+<textarea name="Enter your address" rows="4" cols="25"></textarea>
+</div>
+<br>
+<div>
+<label for="code"><b>Number of Passengers :</b></label>
+<input type="text">
+</div>
+<br>
+
+<div>
+<label><b>Journey Type:</b></label>
+<input type="checkbox">One-Way
+<input type="checkbox">Return
+</div>
+<br>
+<label><b>Rooms/Resorts :</b></label>
+<select>
+<option> </option>
+<option>Required</option>
+<option>Not Required</option>
+<option>Decide after reaching destination</option>
+
+
+</select>
+
+
+<br>
+
+
+
+
+<br>
+</fieldset>
+<div>
+<fieldset>
+<legend style="color:blue"><B>Others</b></legend>
+<br>
+<div>
+<label for="code"><b>Any Additional Message :</b></label>
+<textarea name="Enter your address" rows="5" cols="50"></textarea>
+
+
+</div>
+<br>
+</fieldset>
+<br>
+
+<hr>
+
+                   
+
+                <center><b><input type="submit" value="SUBMIT"></b></center>
+<br>
+
+<br>
+
+                </div>
+
+            </form>
+        </div>
+    </body>
+</html>
